@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "c35ce7f4-2aa8-4edf-9143-4134c87c8e6c",
+		"name": "E-Learning Platform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27146258"
+	},
+	"item": [
+		{
+			"name": "Default api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\":\"admin\",\r\n  \"email\":\"admin@gmail.com\",\r\n  \"password\":\"Xyz1342@#\",\r\n  \"role\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/api/v1/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\":\"admin@gmail.com\",\r\n  \"password\":\"Xyz1342@#\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/api/v1/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Loggedin User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/api/v1/user"
+			},
+			"response": []
+		},
+		{
+			"name": "Update User profile",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"name\": \"harrry\",\r\n    \"email\": \"harry@yt.com\",\r\n    \"profilePicture\": \"https://api.dicebear.com/8.x/pixel-art/svg?seed=harry\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/api/v1/user/update"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User Profile",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{base_url}}/api/v1/user/delete"
+			},
+			"response": []
+		},
+		{
+			"name": "Create course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "titlle",
+							"value": "New batch",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "best course ever",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "999",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "postman-cloud:///1eef3810-7a68-4b70-963d-b4f568196bcb"
+						}
+					]
+				},
+				"url": "{{base_url}}/api/v1/courses"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/api/v1/courses"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Filtered/searched/Pagination courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/api/v1/searchCourses"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Course details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/api/v1/courses/66104e728a597e1242d8213b"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Course",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"title\": \"thaala course\",\r\n    \"description\": \"thala for a reason\",\r\n    \"price\": 777\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/api/v1/courses/66104e728a597e1242d8213b"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Course",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{base_url}}/api/v1/courses/66104e728a597e1242d8213b"
+			},
+			"response": []
+		},
+		{
+			"name": "Enroll In Course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "{{base_url}}/api/v1/66104edd8a597e1242d8213d/enroll"
+			},
+			"response": []
+		},
+		{
+			"name": "View Enrolled Courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/api/v1/enrolled-courses"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000/"
+		}
+	]
+}
