@@ -27,19 +27,19 @@ Welcome to our E-Learning Platform! This platform facilitates online learning. U
 5. Access the application in your browser.
 
 ## env
-   1.PORT 
-   2.DB_URL
+   1. PORT.
+   2. DB_URL.
 
-   3.JWT_SECRET
-   4.MAIL_HOST 
-   5.MAIL_USER
-   6.MAIL_PASS
+   3. JWT_SECRET.
+   4. MAIL_HOST.
+   5. MAIL_USER.
+   6. MAIL_PASS.
 
-   7.CLOUD_NAME 
-   8.API_KEY 
-   9.API_SECRET 
+   7. CLOUD_NAME.
+   8. API_KEY.
+   9. API_SECRET. 
 
-   10.FOLDER_NAME 
+   10. FOLDER_NAME. 
 
 ## Usage
 
